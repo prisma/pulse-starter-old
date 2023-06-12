@@ -17,8 +17,10 @@ Be sure to have the following set up before using this project. Check the [docs]
 Clone this repository:
 
 ```bash
-git clone https://github.com/mhessdev/pulse-starter.git
+git clone https://github.com/prisma/pulse-starter.git
 ```
+
+Install dependencies:
 
 ```bash
 cd pulse-starter
@@ -33,22 +35,22 @@ Create your `.env` file:
 cp .env.example .env
 ```
 
-Open your new `.env` file and set your two variables
+Open your new `.env` file and set your two variables:
 
 ```text
 DATABASE_URL=""
 PULSE_API_KEY=""
 ```
 
-Run prisma generate:
+Run prisma migrate:
 
 ```bash
-npx prisma generate
+npx prisma migrate dev --name init
 ```
 
 ## Run this example
 
-To run a pulse subscription, execute the index.ts file. This file contains multiple function calls, each with comments explaining their purpose. Feel free to use these to test different subscriptions.
+To run a Pulse subscription, execute the `index.ts` file. This file contains multiple function calls, each with comments explaining their purpose. Feel free to use these to test different subscriptions.
 
 ```bash
 npx ts-node index.ts
