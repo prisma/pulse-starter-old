@@ -1,4 +1,4 @@
-# Prisma Example Title
+# Pulse Starter Example
 
 ## Getting started
 
