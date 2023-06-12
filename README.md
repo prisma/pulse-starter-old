@@ -68,7 +68,7 @@ npx prisma studio
 
 If you are running the `userCreateSub()` function in the `index.ts` file you should see the following output in your termainl where you ran `npx ts-node index.ts`
 
-```json
+```
 just received a user create event: {
   action: 'create',
   after: {
