@@ -2,6 +2,16 @@
 
 ## Getting started
 
+Be sure to have the following set up before using this project. Check the [docs](https://pris.ly/pulse-docs) for more information.
+
+-   A database with the following configuration
+    -   Postgres version 12+
+    -   Ensure your database is publicly accessible
+    -   Enable [logical replication](https://www.postgresql.org/docs/current/logical-replication-quick-setup.html) on your database
+    -   A database superuser that can be used for connections inside Pulse
+-   An invitation to Pulse's Early Access program.
+-   A Pulse Cloud Projects API key
+
 ## Download and install dependencies
 
 Clone this repository:
