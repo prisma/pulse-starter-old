@@ -1,11 +1,11 @@
-import prismaClient from "../prisma";
+import prisma from "../prisma";
 
 // Create Events
 export async function postCreateSub(filters = {}) {
 	const postFilter =
 		Object.keys(filters).length > 0 ? { after: { ...filters } } : {};
 
-	const subscription = await prismaClient.post.subscribe({
+	const subscription = await prisma.post.subscribe({
 		create: postFilter,
 	});
 
@@ -23,7 +23,7 @@ export async function postUpdateSub(filters = {}) {
 	const postFilter =
 		Object.keys(filters).length > 0 ? { after: { ...filters } } : {};
 
-	const subscription = await prismaClient.post.subscribe({
+	const subscription = await prisma.post.subscribe({
 		update: postFilter,
 	});
 
@@ -38,7 +38,7 @@ export async function postUpdateSub(filters = {}) {
 
 // Delete Events
 export async function postDeleteSub() {
-	const subscription = await prismaClient.post.subscribe({
+	const subscription = await prisma.post.subscribe({
 		delete: {},
 	});
 

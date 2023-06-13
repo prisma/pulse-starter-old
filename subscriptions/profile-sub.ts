@@ -1,11 +1,11 @@
-import prismaClient from "../prisma";
+import prisma from "../prisma";
 
 // Create Events
 export async function profileCreateSub(filters = {}) {
 	const profileFilter =
 		Object.keys(filters).length > 0 ? { after: { ...filters } } : {};
 
-	const subscription = await prismaClient.profile.subscribe({
+	const subscription = await prisma.profile.subscribe({
 		create: profileFilter,
 	});
 
@@ -23,7 +23,7 @@ export async function profileUpdateSub(filters = {}) {
 	const profileFilter =
 		Object.keys(filters).length > 0 ? { after: { ...filters } } : {};
 
-	const subscription = await prismaClient.profile.subscribe({
+	const subscription = await prisma.profile.subscribe({
 		update: profileFilter,
 	});
 
@@ -38,7 +38,7 @@ export async function profileUpdateSub(filters = {}) {
 
 // Delete Events
 export async function profileDeleteSub() {
-	const subscription = await prismaClient.profile.subscribe({
+	const subscription = await prisma.profile.subscribe({
 		delete: {},
 	});
 
